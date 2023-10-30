@@ -10,8 +10,9 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      const { message } = (await axios.get("http://127.0.0.1:5000/api/v1")).data
-        .data;
+      const { message } = (
+        await axios.get("https://frontend-backend-server.vercel.app/api/v1")
+      ).data.data;
       setMessage(message);
     })();
   }, []);
